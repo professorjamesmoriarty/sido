@@ -1,0 +1,19 @@
+# Contributor: Benoit Rouits <brouits@free.fr>
+pkgname=__PRGNAME__
+pkgver=__VERSION__
+pkgrel=2
+pkgdesc="a mini MPD client for the systray"
+arch=('i686' 'x86_64')
+url="https://dbx.gtmp.org/svn/sido/"
+license=('GPL')
+depends=('gtk2' 'glib2')
+makedepends=('make' 'gcc' 'pkgconfig')
+source=(http://brouits.free.fr/fala/releases/$pkgname-$pkgver.tar.gz)
+noextract=()
+
+build() {
+  cd "$srcdir/$pkgname-$pkgver"
+
+  make PREFIX=/usr || return 1
+  make DESTDIR="$pkgdir" PREFIX=/usr install
+}

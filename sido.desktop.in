@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Sido
+Name[fr]=Sido
+Comment=a mini MPD client
+Comment[fr]=un mini client MPD
+Exec=__PREFIX__/bin/__PRGNAME__
+Icon=__PREFIX__/share/icons/__PRGNAME__.png
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;AudioVideo;Audio;
